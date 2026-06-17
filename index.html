@@ -19,10 +19,13 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   
   <!-- Font Awesome 6 -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Google Fonts: Inter -->
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
+   
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -137,12 +140,16 @@
   </section>
 
   <!-- . PROJECTS SECTION . -->
+
+
   <section id="projects" class="projects">
     <div class="container">
       <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
       <div class="projects-grid">
         
         <!-- GYM-APP Card (HIGHLIGHTED) -->
+
+
         <div class="project-card gym-app-featured">
           <div class="project-badge">✨ LIVE</div>
           <div class="project-icon gradient-accent">
@@ -188,6 +195,8 @@
         </div>
 
         <!-- Web Development Projects Card -->
+
+
         <div class="project-card">
           <div class="project-icon gradient-accent">
             <i class="fas fa-laptop-code"></i>
@@ -249,6 +258,8 @@
   </section>
 
   <!-- . CONTACT SECTION . -->
+
+
   <section id="contact" class="contact">
     <div class="container">
       <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
@@ -276,6 +287,8 @@
   </section>
 
   <!-- . FOOTER . -->
+
+
   <footer>
     <p>© 2026 Vishal Kushwaha </p>
     <div class="footer-social">
@@ -286,6 +299,8 @@
   </footer>
 
   <!-- Back to Top Button -->
+
+
   <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
 
 
@@ -449,17 +464,18 @@
     // Helper functions for form feedback
 
 
-    function showSuccess(message) {
+      function showSuccess(message) {
       formStatus.innerHTML = `<div style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 14px 18px; border-radius: 16px; display: flex; align-items: center; gap: 10px; font-weight: 500;"><i class="fas fa-check-circle"></i> ${message}</div>`;
       formStatus.style.display = 'flex';
       formStatus.style.justifyContent = 'center';
     }
-
+ 
     function showError(message) {
       formStatus.innerHTML = `<div style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 14px 18px; border-radius: 16px; display: flex; align-items: center; gap: 10px; font-weight: 500;"><i class="fas fa-exclamation-circle"></i> ${message}</div>`;
       formStatus.style.display = 'flex';
       formStatus.style.justifyContent = 'center';
     }
+ 
 
     //  SMOOTH NUMBER ANIMATION FOR ACHIEVEMENTS 
 
@@ -488,8 +504,8 @@
           const h3 = entry.target.querySelector('h3');
           const text = h3.textContent;
           
-          if (text === '260+') {
-            animateNumber(h3, 260);
+          if (text === '280+') {
+            animateNumber(h3, 280);
           }
           
           achievementObserver.unobserve(entry.target);

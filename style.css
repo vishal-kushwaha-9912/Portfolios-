@@ -40,6 +40,77 @@ section {
   color: transparent;
 }
 
+/* . TYPING ANIMATION . */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-cursor {
+  0%, 49% {
+    border-right-color: rgba(96, 165, 250, 0.8);
+  }
+  50%, 100% {
+    border-right-color: transparent;
+  }
+}
+
+/* Apply typing effect to the main heading */
+.hero-text h1 .typing-text {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 3px solid rgba(96, 165, 250, 0.8);
+  white-space: nowrap;
+  animation: typing 3s steps(40, end), blink-cursor 0.75s step-end infinite;
+  animation-delay: 0s, 3s;
+  animation-fill-mode: both;
+}
+
+/* . BLINKING GLOW ANIMATION FOR LOGO . */
+@keyframes glow-pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.4),
+                 0 0 20px rgba(96, 165, 250, 0.2);
+    opacity: 1;
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(96, 165, 250, 0.8),
+                 0 0 30px rgba(96, 165, 250, 0.5),
+                 0 0 40px rgba(34, 211, 238, 0.3);
+    opacity: 1;
+  }
+}
+
+@keyframes logo-beat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #60a5fa, #22d3ee);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  animation: glow-pulse 2.5s ease-in-out infinite, logo-beat 2.5s ease-in-out infinite;
+}
+
+.logo:hover {
+  transform: scale(1.12);
+  animation: glow-pulse 1.2s ease-in-out infinite, logo-beat 1.2s ease-in-out infinite;
+}
+
 /* . ANIMATIONS . */
 @keyframes fadeInDown {
   from {
@@ -150,21 +221,6 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, #60a5fa, #22d3ee);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.05);
 }
 
 .nav-links {
